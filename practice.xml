@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S2</id>
+	<name>Registration</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Test Cases</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Register with valid #email</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is opened</preconds>
+											<steps>1. Enter valid email (e.g. test@example.com)
+2. Fill in all other required fields with valid data
+3. Click register button</steps>
+											<expected>1. Email field accepts email without errors
+2. All fields accept inputs without errors
+3. Registration is successful, user is redirected ( to dashboard, or mainpage )</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Register without @ in #email field</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is opened</preconds>
+											<steps>1. Enter an invalid email ( testgmail.com )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the registration field ( invalid format )
+2. All other fields accept data without errors
+3. Registration is blocked, user stays on the same page, system highliths the email error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Register #email field without domain</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed
+
+</preconds>
+											<steps>1. Enter an invalid email ( without domain, test@.com )
+2. Fill in all other fields with valid data
+3. Click to the register button</steps>
+											<expected>1. Validation message error is displayed neat the email field ( invalid format )
+2. All other fields accept data without errors.
+3. Validation is blocked, user stays on the same page, system highlights an email error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Register with empty #email field</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Left email field empty
+2. Fill in all other fields with valid data
+3. Click to registration button</steps>
+											<expected>1. Validation message error appears near the email field with message ( ... )
+2. All other fields accept data without errors
+3. Registration is blocked, user stays on the same page, system highlights the email error </expected>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Register with valid #password ( letters + numbers )</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed</preconds>
+											<steps>1. Enter valid password ( qwe123 )
+2. Fill in all other field with valid information
+3. Click to register button</steps>
+											<expected>1. Password field accepts data without an error
+2. All other fields accept data without an error
+3. Registration is successful, system redirects user to manepage/dashboard</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Regiser with #password &lt;6 characters</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Enter an invalid password ( qwe12 )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the password field ( invalid format )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Register without digits in password field #password</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed</preconds>
+											<steps>1. Enter an invalid password ( qweqwe )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the password field ( invalid format )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>Register without only letters in #password field</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Enter an invalid password ( 123123 )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the password field ( invalid format )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Register with spaces in #password field</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Enter an invalid password ( qwe 12 )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the password field ( invalid format )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>Register with empty #password</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Leave the empty password field 
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the password field ( This is required field )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C11</id>
+				<title>Register with valid #name</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Enter the valid name ( Testname )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Name field accepts name without errors
+2. All other fields accept data without an error
+3. Registration is successful, user is redirected ( to dashboard, or mainpage )</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>Register with only digits field #name</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Enter an invalid name ( 123123 )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the name field ( invalid format )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>Register with too short &lt;2 #name</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Enter an invalid name ( T )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the name field ( name is too short )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>Register with too long &gt;20 #name</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Enter an invalid name ( Testtesttesttesttestt )
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the name field ( invalid format, name is too long )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C15</id>
+				<title>Register with empty field #name</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Leave the name field empty
+2. Fill in all other fields with valid data
+3. Click to register button</steps>
+											<expected>1. Validation message error is displayed near the password field ( invalid format, name field is required )
+2. All other fields accept data without an error
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>Register with #chekbox checked</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Fill in all fields with valid data
+2. Click to checkbox
+3. Click to register button</steps>
+											<expected>1. All fields accept data without an error
+2. Checkbox is checked
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C17</id>
+				<title>Register with #checkbox unchecked</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<preconds>Registration form is displayed </preconds>
+											<steps>1. Fill in all fields with valid data
+2. Leave the checkbox unchecked
+3. Click to register button</steps>
+											<expected>1. All fields accept data without an error
+2. The checkbox is unchecked
+3. Registration is blocked, user stays on the same page, system highlights password error</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
